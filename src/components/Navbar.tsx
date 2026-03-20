@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import MaterialIcon from "@/components/MaterialIcon";
 import hiveLogo from "@/assets/hive-logo.svg";
 
 const navLinks = [
@@ -49,7 +49,7 @@ const Navbar = () => {
           className="md:hidden p-2 text-foreground"
           aria-label="Toggle menu"
         >
-          {open ? <X size={24} /> : <Menu size={24} />}
+          <MaterialIcon name={open ? "close" : "menu"} size={24} />
         </button>
       </div>
 

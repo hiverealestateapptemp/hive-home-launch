@@ -1,25 +1,25 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Home, MessageCircle, Users, Video } from "lucide-react";
+import MaterialIcon from "@/components/MaterialIcon";
 
 const features = [
   {
-    icon: Home,
+    icon: "home",
     title: "Post Listings",
     description: "Share homes, condos, and investment properties with beautiful photo galleries.",
   },
   {
-    icon: MessageCircle,
+    icon: "chat_bubble",
     title: "Direct Messaging",
     description: "Connect with buyers, sellers, and agents instantly with in-app chat.",
   },
   {
-    icon: Users,
+    icon: "group",
     title: "Agent Network",
     description: "Join as an agent and grow your client base through social discovery.",
   },
   {
-    icon: Video,
+    icon: "videocam",
     title: "Live Walkthroughs",
     description: "View real-time video tours of homes you're interested in.",
   },
@@ -44,7 +44,7 @@ const FeatureGrid = ({ dark = false }: { dark?: boolean }) => {
           }`}
         >
           <div className="w-12 h-12 rounded-xl bg-honey/15 flex items-center justify-center mb-4 group-hover:bg-honey/25 group-hover:scale-110 transition-all duration-300">
-            <f.icon className="w-6 h-6 text-honey" />
+            <MaterialIcon name={f.icon} size={24} className="text-honey" />
           </div>
           <h3 className={`font-display text-lg font-bold ${dark ? "text-on-surface-dark" : "text-foreground"}`}>{f.title}</h3>
           <p className={`mt-2 text-sm leading-relaxed ${dark ? "text-on-surface-dark-muted" : "text-warm-gray"}`}>{f.description}</p>
