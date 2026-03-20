@@ -22,10 +22,10 @@ const ComingSoon = () => {
       className="text-center"
     >
       <img src={honeycomb} alt="" className="w-12 h-12 mx-auto mb-6 opacity-60" />
-      <h2 className="font-display text-3xl md:text-4xl font-bold text-on-surface-dark tracking-tight">
+      <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground tracking-tight">
         Coming Soon
       </h2>
-      <p className="mt-4 text-lg text-on-surface-dark-muted max-w-md mx-auto">
+      <p className="mt-4 text-lg text-warm-gray max-w-md mx-auto">
         Hive will soon be available on the App Store. Stay tuned for launch updates.
       </p>
     </motion.div>
@@ -39,17 +39,15 @@ const Index = () => {
       <HeroSection />
 
       {/* Feature Grid */}
-      <section id="features" className="relative bg-surface-dark py-20 md:py-28 grain-overlay overflow-hidden">
-        <div className="container relative z-10">
-          <div className="text-center mb-14">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-on-surface-dark tracking-tight">
-              Everything you need
-            </h2>
-            <p className="mt-3 text-on-surface-dark-muted text-lg">Built for buyers, sellers, and agents alike.</p>
-          </div>
-          <div className="max-w-2xl mx-auto">
-            <FeatureGrid dark />
-          </div>
+      <section id="features" className="container py-20 md:py-28">
+        <div className="text-center mb-14">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground tracking-tight">
+            Everything you need
+          </h2>
+          <p className="mt-3 text-warm-gray text-lg">Built for buyers, sellers, and agents alike.</p>
+        </div>
+        <div className="max-w-2xl mx-auto">
+          <FeatureGrid />
         </div>
       </section>
 
@@ -82,10 +80,8 @@ const Index = () => {
       </section>
 
       {/* Coming Soon */}
-      <section id="coming-soon" className="relative bg-surface-dark py-20 md:py-28 grain-overlay overflow-hidden">
-        <div className="container relative z-10">
-          <ComingSoon />
-        </div>
+      <section id="coming-soon" className="container py-20 md:py-28">
+        <ComingSoon />
       </section>
 
       <Footer />
