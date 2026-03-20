@@ -58,6 +58,15 @@ export default {
         },
         charcoal: "hsl(var(--charcoal))",
         "warm-gray": "hsl(var(--warm-gray))",
+        "surface-dark": {
+          DEFAULT: "hsl(var(--surface-dark))",
+          high: "hsl(var(--surface-dark-high))",
+        },
+        "on-surface-dark": {
+          DEFAULT: "hsl(var(--on-surface-dark))",
+          muted: "hsl(var(--on-surface-dark-muted))",
+        },
+        "border-dark": "hsl(var(--border-dark))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

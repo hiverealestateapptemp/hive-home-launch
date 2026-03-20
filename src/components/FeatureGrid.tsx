@@ -25,7 +25,7 @@ const features = [
   },
 ];
 
-const FeatureGrid = () => {
+const FeatureGrid = ({ dark = false }: { dark?: boolean }) => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
 
@@ -37,13 +37,17 @@ const FeatureGrid = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: i * 0.1 }}
-          className="group p-6 rounded-2xl bg-card border border-border shadow-card hover:shadow-lg hover:border-honey/40 transition-all duration-300"
+          className={`group p-6 rounded-2xl border transition-all duration-300 ${
+            dark
+              ? "bg-surface-dark-high border-border-dark shadow-none hover:border-honey/40"
+              : "bg-card border-border shadow-card hover:shadow-lg hover:border-honey/40"
+          }`}
         >
-          <div className="w-12 h-12 rounded-xl bg-honey-light flex items-center justify-center mb-4 group-hover:bg-honey/20 transition-colors">
-            <f.icon className="w-6 h-6 text-honey-dark" />
+          <div className="w-12 h-12 rounded-xl bg-honey/15 flex items-center justify-center mb-4 group-hover:bg-honey/25 transition-colors">
+            <f.icon className="w-6 h-6 text-honey" />
           </div>
-          <h3 className="font-display text-lg font-bold text-foreground">{f.title}</h3>
-          <p className="mt-2 text-sm text-warm-gray leading-relaxed">{f.description}</p>
+          <h3 className={`font-display text-lg font-bold ${dark ? "text-on-surface-dark" : "text-foreground"}`}>{f.title}</h3>
+          <p className={`mt-2 text-sm leading-relaxed ${dark ? "text-on-surface-dark-muted" : "text-warm-gray"}`}>{f.description}</p>
         </motion.div>
       ))}
     </div>

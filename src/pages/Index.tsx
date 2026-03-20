@@ -22,10 +22,10 @@ const ComingSoon = () => {
       className="text-center"
     >
       <img src={honeycomb} alt="" className="w-12 h-12 mx-auto mb-6 opacity-60" />
-      <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground tracking-tight">
+      <h2 className="font-display text-3xl md:text-4xl font-bold text-on-surface-dark tracking-tight">
         Coming Soon
       </h2>
-      <p className="mt-4 text-lg text-warm-gray max-w-md mx-auto">
+      <p className="mt-4 text-lg text-on-surface-dark-muted max-w-md mx-auto">
         Hive will soon be available on the App Store. Stay tuned for launch updates.
       </p>
     </motion.div>
