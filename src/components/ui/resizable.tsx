@@ -1,4 +1,4 @@
-import { GripVertical } from "lucide-react";
+import MaterialIcon from "@/components/MaterialIcon";
 import * as ResizablePrimitive from "react-resizable-panels";
 
 import { cn } from "@/lib/utils";
