@@ -39,8 +39,8 @@ const Index = () => {
       <HeroSection />
 
       {/* Feature Grid */}
-      <section id="features" className="bg-surface-dark py-20 md:py-28">
-        <div className="container">
+      <section id="features" className="relative bg-surface-dark py-20 md:py-28 grain-overlay overflow-hidden">
+        <div className="container relative z-10">
           <div className="text-center mb-14">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-on-surface-dark tracking-tight">
               Everything you need
@@ -82,8 +82,8 @@ const Index = () => {
       </section>
 
       {/* Coming Soon */}
-      <section id="coming-soon" className="bg-surface-dark py-20 md:py-28">
-        <div className="container">
+      <section id="coming-soon" className="relative bg-surface-dark py-20 md:py-28 grain-overlay overflow-hidden">
+        <div className="container relative z-10">
           <ComingSoon />
         </div>
       </section>
