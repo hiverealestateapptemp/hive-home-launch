@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
 import hiveLogo from "@/assets/hive-logo.svg";
 
 const navLinks = [
@@ -49,7 +48,11 @@ const Navbar = () => {
           className="md:hidden p-2 text-foreground active:scale-95 transition-transform"
           aria-label="Toggle menu"
         >
-          {open ? <X size={22} /> : <Menu size={22} />}
+          <div className="w-5 h-4 flex flex-col justify-between relative">
+            <span className={`block h-[2px] w-full bg-foreground rounded-full transition-all duration-300 origin-center ${open ? "rotate-45 translate-y-[7px]" : ""}`} />
+            <span className={`block h-[2px] bg-foreground rounded-full transition-all duration-300 ${open ? "w-0 opacity-0" : "w-3.5"}`} />
+            <span className={`block h-[2px] w-full bg-foreground rounded-full transition-all duration-300 origin-center ${open ? "-rotate-45 -translate-y-[7px]" : ""}`} />
+          </div>
         </button>
       </div>
 
