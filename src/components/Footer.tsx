@@ -2,28 +2,28 @@ import hiveLogo from "@/assets/hive-logo.svg";
 
 const Footer = () => {
   return (
-    <footer className="border-t border-border bg-card">
+    <footer className="border-t border-border/60 bg-card">
       <div className="container py-12">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div>
-            <img src={hiveLogo} alt="Hive" className="h-6 mb-3" />
-            <p className="text-sm text-warm-gray">
+            <img src={hiveLogo} alt="Hive" className="h-6 mb-3 opacity-80" />
+            <p className="text-sm text-warm-gray max-w-xs">
               Discover homes. Share listings. Connect with buyers and agents.
             </p>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-6 text-sm">
-            <a href="/" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a href="/" className="text-muted-foreground hover:text-foreground transition-colors duration-200">
               Home
             </a>
-            <a href="/support" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a href="/support" className="text-muted-foreground hover:text-foreground transition-colors duration-200">
               Support
             </a>
             <a
               href="https://app.termly.io/policy-viewer/policy.html?policyUUID=b2836348-d228-4e08-b24b-8d5cf57a0d33"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="text-muted-foreground hover:text-foreground transition-colors duration-200"
             >
               Privacy Policy
             </a>
@@ -31,16 +31,16 @@ const Footer = () => {
               href="https://app.termly.io/policy-viewer/policy.html?policyUUID=3a783d46-799c-43f8-bf67-2d6f1fa55ac8"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="text-muted-foreground hover:text-foreground transition-colors duration-200"
             >
               Terms of Service
             </a>
           </div>
         </div>
 
-        <div className="mt-8 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-warm-gray">
+        <div className="mt-8 pt-6 border-t border-border/60 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-warm-gray">
           <p>© {new Date().getFullYear()} Hive. All rights reserved.</p>
-          <a href="mailto:support@hive.com" className="hover:text-foreground transition-colors">
+          <a href="mailto:support@hive.com" className="hover:text-foreground transition-colors duration-200">
             support@hive.com
           </a>
         </div>
