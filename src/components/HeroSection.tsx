@@ -53,7 +53,7 @@ const HeroSection = () => {
         >
           <a
             href="#features"
-            className="inline-flex items-center justify-center px-8 py-4 rounded-2xl font-semibold text-primary-foreground bg-gradient-honey shadow-honey hover:shadow-lg transition-all duration-300 hover:scale-105 hover:-translate-y-0.5"
+            className="inline-flex items-center justify-center px-8 py-4 rounded-2xl font-semibold text-foreground bg-gradient-honey shadow-honey hover:shadow-lg transition-all duration-300 hover:scale-105 hover:-translate-y-0.5"
           >
             Explore Features
           </a>
