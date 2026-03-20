@@ -39,15 +39,17 @@ const Index = () => {
       <HeroSection />
 
       {/* Feature Grid */}
-      <section id="features" className="container py-20 md:py-28">
-        <div className="text-center mb-14">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground tracking-tight">
-            Everything you need
-          </h2>
-          <p className="mt-3 text-warm-gray text-lg">Built for buyers, sellers, and agents alike.</p>
-        </div>
-        <div className="max-w-2xl mx-auto">
-          <FeatureGrid />
+      <section id="features" className="bg-surface-dark py-20 md:py-28">
+        <div className="container">
+          <div className="text-center mb-14">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-on-surface-dark tracking-tight">
+              Everything you need
+            </h2>
+            <p className="mt-3 text-on-surface-dark-muted text-lg">Built for buyers, sellers, and agents alike.</p>
+          </div>
+          <div className="max-w-2xl mx-auto">
+            <FeatureGrid dark />
+          </div>
         </div>
       </section>
 
