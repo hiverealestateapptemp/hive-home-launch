@@ -36,14 +36,14 @@ const FeatureGrid = ({ dark = false }: { dark?: boolean }) => {
           key={f.title}
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5, delay: i * 0.1 }}
-          className={`group p-6 rounded-2xl border transition-all duration-300 ${
+          transition={{ duration: 0.6, delay: i * 0.12, ease: [0.16, 1, 0.3, 1] }}
+          className={`group p-6 rounded-2xl transition-all duration-300 hover-glow cursor-default ${
             dark
-              ? "bg-surface-dark-high border-border-dark shadow-none hover:border-honey/40"
-              : "bg-card border-border shadow-card hover:shadow-lg hover:border-honey/40"
+              ? "glass-card hover:border-honey/30"
+              : "glass-card-light shadow-card hover:border-honey/40"
           }`}
         >
-          <div className="w-12 h-12 rounded-xl bg-honey/15 flex items-center justify-center mb-4 group-hover:bg-honey/25 transition-colors">
+          <div className="w-12 h-12 rounded-xl bg-honey/15 flex items-center justify-center mb-4 group-hover:bg-honey/25 group-hover:scale-110 transition-all duration-300">
             <f.icon className="w-6 h-6 text-honey" />
           </div>
           <h3 className={`font-display text-lg font-bold ${dark ? "text-on-surface-dark" : "text-foreground"}`}>{f.title}</h3>

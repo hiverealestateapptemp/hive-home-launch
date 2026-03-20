@@ -22,7 +22,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-card/80 backdrop-blur-xl border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-card/60 backdrop-blur-2xl border-b border-border/50">
       <div className="container flex items-center justify-between h-16">
         <a href="/" className="flex items-center gap-2">
           <img src={hiveLogo} alt="Hive" className="h-8" />
@@ -36,7 +36,7 @@ const Navbar = () => {
               href={l.href}
               target={l.external ? "_blank" : undefined}
               rel={l.external ? "noopener noreferrer" : undefined}
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200"
             >
               {l.label}
             </a>
@@ -60,7 +60,7 @@ const Navbar = () => {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="md:hidden overflow-hidden bg-card border-b border-border"
+            className="md:hidden overflow-hidden bg-card/80 backdrop-blur-2xl border-b border-border/50"
           >
             <div className="container py-4 flex flex-col gap-4">
               {navLinks.map((l) => (
