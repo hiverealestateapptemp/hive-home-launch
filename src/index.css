@@ -50,6 +50,12 @@
     --honey-dark: 44 100% 42%;
     --charcoal: 270 5% 12%;
     --warm-gray: 40 10% 55%;
+
+    --surface-dark: 270 6% 10%;
+    --surface-dark-high: 270 5% 14%;
+    --on-surface-dark: 270 3% 92%;
+    --on-surface-dark-muted: 270 3% 60%;
+    --border-dark: 270 4% 20%;
   }
 }
 
