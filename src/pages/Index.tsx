@@ -82,8 +82,10 @@ const Index = () => {
       </section>
 
       {/* Coming Soon */}
-      <section id="coming-soon" className="container py-20 md:py-28">
-        <ComingSoon />
+      <section id="coming-soon" className="bg-surface-dark py-20 md:py-28">
+        <div className="container">
+          <ComingSoon />
+        </div>
       </section>
 
       <Footer />
