@@ -1,6 +1,6 @@
 import * as React from "react";
 import { OTPInput, OTPInputContext } from "input-otp";
-import MaterialIcon from "@/components/MaterialIcon";
+import { Dot } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
@@ -52,7 +52,7 @@ InputOTPSlot.displayName = "InputOTPSlot";
 const InputOTPSeparator = React.forwardRef<React.ElementRef<"div">, React.ComponentPropsWithoutRef<"div">>(
   ({ ...props }, ref) => (
     <div ref={ref} role="separator" {...props}>
-      <MaterialIcon name="fiber_manual_record" size={24} />
+      <Dot />
     </div>
   ),
 );

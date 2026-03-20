@@ -1,11 +1,11 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
-import MaterialIcon from "@/components/MaterialIcon";
+import { Mail, Clock, AlertTriangle, Upload, UserX } from "lucide-react";
 
 const sections = [
   {
-    icon: "mail",
+    icon: Mail,
     title: "Contact Support",
     content: (
       <>
@@ -16,24 +16,24 @@ const sections = [
           </a>
         </p>
         <div className="flex items-center gap-2 mt-2 text-sm text-muted-foreground">
-          <MaterialIcon name="schedule" size={16} />
+          <Clock className="w-4 h-4" />
           <span>Typical response time: 24–48 hours</span>
         </div>
       </>
     ),
   },
   {
-    icon: "person_off",
+    icon: UserX,
     title: "Login Issues",
     content: <p className="text-warm-gray">Ensure you are using the correct email or Apple login.</p>,
   },
   {
-    icon: "upload",
+    icon: Upload,
     title: "Listing Upload Problems",
     content: <p className="text-warm-gray">Make sure images are under the allowed file size.</p>,
   },
   {
-    icon: "warning",
+    icon: AlertTriangle,
     title: "Report Abuse",
     content: <p className="text-warm-gray">Email support with details about the issue.</p>,
   },
@@ -60,7 +60,7 @@ const Support = () => {
             >
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-10 h-10 rounded-xl bg-honey-light flex items-center justify-center">
-                  <MaterialIcon name={s.icon} size={20} className="text-honey-dark" />
+                  <s.icon className="w-5 h-5 text-honey-dark" />
                 </div>
                 <h2 className="font-display text-lg font-bold text-foreground">{s.title}</h2>
               </div>
