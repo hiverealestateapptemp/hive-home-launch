@@ -29,7 +29,7 @@ const features = [
   },
 ];
 
-const ease = [0.16, 1, 0.3, 1];
+const ease = [0.16, 1, 0.3, 1] as [number, number, number, number];
 
 const FeatureGrid = () => {
   const ref = useRef(null);

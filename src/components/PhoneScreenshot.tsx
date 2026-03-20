@@ -2,7 +2,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import postListings from "@/assets/post-listings.png";
 
-const ease = [0.16, 1, 0.3, 1];
+const ease = [0.16, 1, 0.3, 1] as [number, number, number, number];
 
 const PhoneScreenshot = () => {
   const ref = useRef(null);

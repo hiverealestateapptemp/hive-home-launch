@@ -8,7 +8,7 @@ interface FeatureRowProps {
   reversed?: boolean;
 }
 
-const ease = [0.16, 1, 0.3, 1];
+const ease = [0.16, 1, 0.3, 1] as [number, number, number, number];
 
 const FeatureRow = ({ title, description, media, reversed = false }: FeatureRowProps) => {
   const ref = useRef(null);
