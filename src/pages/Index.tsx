@@ -62,18 +62,18 @@ const Index = () => {
           <FeatureRow
             title="Chat with Agents & Buyers"
             description="No more phone tag. Start real conversations instantly with in-app messaging designed for real estate."
-            media={<PhoneVideo src="/videos/agent-buyer-chat.mp4" alt="Agent and buyer chat demo" />}
+            media={<PhoneVideo src={`${import.meta.env.BASE_URL}videos/agent-buyer-chat.mp4`} alt="Agent and buyer chat demo" />}
             reversed
           />
           <FeatureRow
             title="Live Video Walkthroughs"
             description="Tour homes from anywhere with live video. Ask questions in real time and get the feel of a property before visiting."
-            media={<PhoneVideo src="/videos/live-walkthrough.mp4" alt="Live walkthrough demo" />}
+            media={<PhoneVideo src={`${import.meta.env.BASE_URL}videos/live-walkthrough.mp4`} alt="Live walkthrough demo" />}
           />
           <FeatureRow
             title="Join as an Agent"
             description="Build your presence, connect with qualified buyers, and grow your business on a platform made for real estate pros."
-            media={<PhoneVideo src="/videos/join-as-agent.mp4" alt="Agent onboarding demo" />}
+            media={<PhoneVideo src={`${import.meta.env.BASE_URL}videos/join-as-agent.mp4`} alt="Agent onboarding demo" />}
             reversed
           />
         </div>
