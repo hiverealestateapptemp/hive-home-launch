@@ -1,10 +1,11 @@
 import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import hiveLogo from "@/assets/hive-logo.svg";
 
 const navLinks = [
-  { label: "Home", href: "/" },
-  { label: "Support", href: "/support" },
+  { label: "Home", to: "/" },
+  { label: "Support", to: "/support" },
   {
     label: "Privacy",
     href: "https://app.termly.io/policy-viewer/policy.html?policyUUID=b2836348-d228-4e08-b24b-8d5cf57a0d33",
@@ -23,23 +24,33 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-card/80 backdrop-blur-xl border-b border-border">
       <div className="container flex items-center justify-between h-16">
-        <a href="/" className="flex items-center gap-2">
+        <Link to="/" className="flex items-center gap-2">
           <img src={hiveLogo} alt="Hive" className="h-8" />
-        </a>
+        </Link>
 
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((l) => (
-            <a
-              key={l.label}
-              href={l.href}
-              target={l.external ? "_blank" : undefined}
-              rel={l.external ? "noopener noreferrer" : undefined}
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-            >
-              {l.label}
-            </a>
-          ))}
+          {navLinks.map((l) =>
+            l.external ? (
+              <a
+                key={l.label}
+                href={l.href}
+                target={l.external ? "_blank" : undefined}
+                rel={l.external ? "noopener noreferrer" : undefined}
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {l.label}
+              </a>
+            ) : (
+              <NavLink
+                key={l.label}
+                to={l.to!}
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {l.label}
+              </NavLink>
+            )
+          )}
         </div>
 
         {/* Mobile toggle */}
@@ -72,16 +83,27 @@ const Navbar = () => {
           >
             <div className="container py-4 flex flex-col gap-4">
               {navLinks.map((l) => (
-                <a
-                  key={l.label}
-                  href={l.href}
-                  target={l.external ? "_blank" : undefined}
-                  rel={l.external ? "noopener noreferrer" : undefined}
-                  onClick={() => setOpen(false)}
-                  className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  {l.label}
-                </a>
+                l.external ? (
+                  <a
+                    key={l.label}
+                    href={l.href}
+                    target={l.external ? "_blank" : undefined}
+                    rel={l.external ? "noopener noreferrer" : undefined}
+                    onClick={() => setOpen(false)}
+                    className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    {l.label}
+                  </a>
+                ) : (
+                  <NavLink
+                    key={l.label}
+                    to={l.to!}
+                    onClick={() => setOpen(false)}
+                    className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    {l.label}
+                  </NavLink>
+                )
               ))}
             </div>
           </motion.div>
