@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import hiveLogo from "@/assets/hive-logo.svg";
 
 const Footer = () => {
@@ -13,12 +14,12 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-6 text-sm">
-            <a href="/" className="text-muted-foreground hover:text-foreground transition-colors">
+            <Link to="/" className="text-muted-foreground hover:text-foreground transition-colors">
               Home
-            </a>
-            <a href="/support" className="text-muted-foreground hover:text-foreground transition-colors">
+            </Link>
+            <Link to="/support" className="text-muted-foreground hover:text-foreground transition-colors">
               Support
-            </a>
+            </Link>
             <a
               href="https://app.termly.io/policy-viewer/policy.html?policyUUID=b2836348-d228-4e08-b24b-8d5cf57a0d33"
               target="_blank"
