@@ -68,7 +68,7 @@ const Index = () => {
           <FeatureRow
             title="Live Video Walkthroughs"
             description="Tour homes from anywhere with live video. Ask questions in real time and get the feel of a property before visiting."
-            media={<PhoneVideo src="/videos/live-walkthrough.mp4" alt="Live walkthrough demo" />}
+            media={<PhoneVideo src={`${import.meta.env.BASE_URL}videos/live-walkthrough.mp4`} alt="Live walkthrough demo" />}
           />
           <FeatureRow
             title="Join as an Agent"
