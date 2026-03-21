@@ -62,7 +62,7 @@ const Index = () => {
           <FeatureRow
             title="Chat with Agents & Buyers"
             description="No more phone tag. Start real conversations instantly with in-app messaging designed for real estate."
-            media={<PhoneVideo src="/videos/agent-buyer-chat.mp4" alt="Agent and buyer chat demo" />}
+            media={<PhoneVideo src={`${import.meta.env.BASE_URL}videos/agent-buyer-chat.mp4`} alt="Agent and buyer chat demo" />}
             reversed
           />
           <FeatureRow
