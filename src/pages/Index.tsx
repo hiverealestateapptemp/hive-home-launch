@@ -73,7 +73,7 @@ const Index = () => {
           <FeatureRow
             title="Join as an Agent"
             description="Build your presence, connect with qualified buyers, and grow your business on a platform made for real estate pros."
-            media={<PhoneVideo src="/videos/join-as-agent.mp4" alt="Agent onboarding demo" />}
+            media={<PhoneVideo src={`${import.meta.env.BASE_URL}videos/join-as-agent.mp4`} alt="Agent onboarding demo" />}
             reversed
           />
         </div>
