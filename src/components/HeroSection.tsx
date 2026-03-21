@@ -45,18 +45,18 @@ const HeroSection = () => {
           transition={{ duration: 0.7, delay: 0.4 }}
           className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
         >
-          <a
-            href="#features"
+          <button
+            onClick={() => document.getElementById("features")?.scrollIntoView({ behavior: "smooth" })}
             className="inline-flex items-center justify-center px-8 py-4 rounded-2xl font-semibold text-primary-foreground bg-gradient-honey shadow-honey hover:shadow-lg transition-all duration-300 hover:scale-105"
           >
             Explore Features
-          </a>
-          <a
-            href="#coming-soon"
+          </button>
+          <button
+            onClick={() => document.getElementById("coming-soon")?.scrollIntoView({ behavior: "smooth" })}
             className="inline-flex items-center justify-center px-8 py-4 rounded-2xl font-semibold text-foreground bg-card border border-border shadow-card hover:shadow-lg transition-all duration-300"
           >
             Coming Soon
-          </a>
+          </button>
         </motion.div>
       </div>
     </section>
