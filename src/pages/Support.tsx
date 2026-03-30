@@ -11,8 +11,12 @@ const sections = [
       <>
         <p className="text-warm-gray">
           Email us at{" "}
-          <a href="mailto:support@hive.com" className="text-honey-dark font-medium hover:underline">
-            support@hive.com
+          <a href="mailto:hello@homesbyhive.com" className="text-honey-dark font-medium hover:underline">
+            hello@homesbyhive.com
+          </a>
+          {" "}or call{" "}
+          <a href="tel:+16192776017" className="text-honey-dark font-medium hover:underline">
+            (619) 277-6017
           </a>
         </p>
         <div className="flex items-center gap-2 mt-2 text-sm text-muted-foreground">
