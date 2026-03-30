@@ -9,7 +9,12 @@ const Footer = () => {
           <div>
             <img src={hiveLogo} alt="Hive" className="h-6 mb-3" />
             <p className="text-sm text-warm-gray">
-              Discover homes. Share listings. Connect with buyers and agents.
+              Homes By Hive, Inc.
+            </p>
+            <p className="text-sm text-warm-gray mt-1">
+              4225 Executive Square, #600 6011
+              <br />
+              La Jolla, CA 92037
             </p>
           </div>
 
