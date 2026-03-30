@@ -82,8 +82,8 @@ const Support = () => {
           <h2 className="font-display text-lg font-bold text-foreground">Account Deletion</h2>
           <p className="mt-2 text-warm-gray">
             To delete your account and associated data, email{" "}
-            <a href="mailto:privacy@hive.com" className="text-honey-dark font-medium hover:underline">
-              privacy@hive.com
+            <a href="mailto:hello@homesbyhive.com" className="text-honey-dark font-medium hover:underline">
+              hello@homesbyhive.com
             </a>
           </p>
         </motion.div>

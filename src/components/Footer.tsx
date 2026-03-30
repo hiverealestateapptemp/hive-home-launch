@@ -46,9 +46,14 @@ const Footer = () => {
 
         <div className="mt-8 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-warm-gray">
           <p>© {new Date().getFullYear()} Hive. All rights reserved.</p>
-          <a href="mailto:support@hive.com" className="hover:text-foreground transition-colors">
-            support@hive.com
-          </a>
+          <div className="flex flex-col sm:flex-row items-center gap-4">
+            <a href="mailto:hello@homesbyhive.com" className="hover:text-foreground transition-colors">
+              hello@homesbyhive.com
+            </a>
+            <a href="tel:+16192776017" className="hover:text-foreground transition-colors">
+              (619) 277-6017
+            </a>
+          </div>
         </div>
       </div>
     </footer>
